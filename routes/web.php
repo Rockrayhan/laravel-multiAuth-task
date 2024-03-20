@@ -32,6 +32,8 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard') ;
+Route::post('/user/status/{id}',[AdminController::class,'status'])->name('user.status') ;
+Route::get('/user/delete/{id}',[AdminController::class,'delete'])->name('user.delete') ;
 
 Route::get('/dashboard',[UserController::class,'dashboard'])->name('dashboard');
 
